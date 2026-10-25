@@ -1,0 +1,1604 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CakraBuanaJayantara - Premier Indonesian Spice Exporter & Supplier</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#fdf8f0',
+                            100: '#f9edd8',
+                            500: '#c8802c', // Warm spice gold
+                            600: '#b0671f',
+                            800: '#5c330f', // Deep mahogany spice
+                            900: '#381e07',
+                        },
+                        herb: {
+                            500: '#2d5a3f', // Forest herbal green
+                            600: '#224631',
+                        }
+                    }
+                }
+            }
+        };
+    </script>
+</head>
+<body class="font-['Plus_Jakarta_Sans'] bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100 antialiased selection:bg-brand-500 selection:text-white transition-colors duration-300">
+
+    <!-- Header / Navbar -->
+    <header class="fixed top-0 left-0 right-0 z-50 border-b transition-all duration-300 bg-white/90 dark:bg-slate-900/90 border-slate-200/80 dark:border-slate-800 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="#" class="flex items-center space-x-3 group">
+                    <div class="w-10 h-10 rounded-xl bg-brand-500 text-white flex items-center justify-center font-bold text-xl shadow-lg shadow-brand-500/30 group-hover:scale-105 transition-transform">
+                        <i class="Jayantara 5.png">
+                        <img src="logo c.png">
+                        </i>
+                    </div>
+                    <div>
+                        <span class="text-xl font-extrabold tracking-tight text-slate-900 dark:text-white block leading-none">CakraBuana</span>
+                        <span class="text-xs font-semibold text-brand-600 dark:text-brand-500 tracking-widest uppercase">Jayantara</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden lg:flex items-center space-x-8 font-medium text-sm text-slate-700 dark:text-slate-200">
+                    <a href="#about" data-i18n="nav_about" class="hover:text-brand-600 dark:hover:text-brand-500 transition-colors">Profil Perusahaan</a>
+                    <a href="#dashboard" data-i18n="nav_dashboard" class="hover:text-brand-600 dark:hover:text-brand-500 transition-colors">Dashboard Operasional</a>
+                    <a href="#products" data-i18n="nav_products" class="hover:text-brand-600 dark:hover:text-brand-500 transition-colors">Produk Rempah</a>
+                    <a href="#advantages" data-i18n="nav_advantages" class="hover:text-brand-600 dark:hover:text-brand-500 transition-colors">Keunggulan</a>
+                    <a href="#contact" data-i18n="nav_contact" class="hover:text-brand-600 dark:hover:text-brand-500 transition-colors">Kontak</a>
+                </nav>
+
+                <!-- Language Selector, Dark Mode Toggle & CTA Button -->
+                <div class="flex items-center space-x-2 sm:space-x-3">
+                    <!-- Dark / Light Mode Toggle -->
+                    <button id="themeToggle" class="p-2.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-amber-400 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all border border-slate-200 dark:border-slate-700" title="Toggle Dark/Light Mode" aria-label="Toggle Dark/Light Mode">
+                        <i class="fa-solid fa-moon text-base dark:hidden"></i>
+                        <i class="fa-solid fa-sun text-base hidden dark:block"></i>
+                    </button>
+
+                    <!-- Language Selector -->
+                    <div class="relative">
+                        <select id="langSelect" class="bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-xs font-semibold px-2.5 py-2 text-slate-700 dark:text-slate-200 hover:border-brand-500 dark:hover:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500 transition-all cursor-pointer">
+                            <option value="id" selected>🇮🇩 ID</option>
+                            <option value="en">🇬🇧 EN</option>
+                            <option value="zh">🇨🇳 ZH</option>
+                            <option value="es">🇪🇸 ES</option>
+                            <option value="de">🇩🇪 DE</option>
+                        </select>
+                    </div>
+
+                    <a href="https://wa.me/6287721953144?text=Halo%20CakraBuanaJayantara,%20saya%20ingin%20berdiskusi%20mengenai%20pemesanan%20rempah." target="_blank" class="hidden sm:inline-flex items-center space-x-2 bg-herb-500 hover:bg-herb-600 text-white font-semibold px-4 py-2 rounded-full shadow-md hover:shadow-lg transition-all text-xs">
+                        <i class="fa-brands fa-whatsapp text-base"></i>
+                        <span data-i18n="btn_whatsapp">WhatsApp</span>
+                    </a>
+                    
+                    <button id="mobileMenuBtn" class="lg:hidden p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 focus:outline-none" aria-label="Toggle Navigation">
+                        <i class="fa-solid fa-bars text-2xl" id="menuIcon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobileMenu" class="hidden lg:hidden border-t border-slate-200 dark:border-slate-800 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md px-4 pt-2 pb-6 space-y-3 shadow-xl">
+            <a href="#about" data-i18n="nav_about" class="block px-3 py-2 rounded-md font-medium text-slate-700 dark:text-slate-200 hover:text-brand-600 hover:bg-brand-50 dark:hover:bg-slate-800">Profil Perusahaan</a>
+            <a href="#dashboard" data-i18n="nav_dashboard" class="block px-3 py-2 rounded-md font-medium text-slate-700 dark:text-slate-200 hover:text-brand-600 hover:bg-brand-50 dark:hover:bg-slate-800">Dashboard Operasional</a>
+            <a href="#products" data-i18n="nav_products" class="block px-3 py-2 rounded-md font-medium text-slate-700 dark:text-slate-200 hover:text-brand-600 hover:bg-brand-50 dark:hover:bg-slate-800">Produk Rempah</a>
+            <a href="#advantages" data-i18n="nav_advantages" class="block px-3 py-2 rounded-md font-medium text-slate-700 dark:text-slate-200 hover:text-brand-600 hover:bg-brand-50 dark:hover:bg-slate-800">Keunggulan</a>
+            <a href="#contact" data-i18n="nav_contact" class="block px-3 py-2 rounded-md font-medium text-slate-700 dark:text-slate-200 hover:text-brand-600 hover:bg-brand-50 dark:hover:bg-slate-800">Kontak</a>
+            <a href="https://wa.me/6287721953144?text=Halo%20CakraBuanaJayantara,%20saya%20ingin%20konsultasi%20rempah." target="_blank" class="flex items-center justify-center space-x-2 bg-herb-500 text-white font-semibold py-3 rounded-xl w-full mt-2">
+                <i class="fa-brands fa-whatsapp text-lg"></i>
+                <span data-i18n="btn_whatsapp">WhatsApp</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center pt-28 pb-16 bg-gradient-to-br from-slate-900 via-brand-900 to-slate-950 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center space-x-2 bg-brand-500/30 backdrop-blur-md border border-brand-500/40 px-4 py-1.5 rounded-full mb-6">
+                    <span class="w-2 h-2 rounded-full bg-brand-500 animate-pulse"></span>
+                    <span class="text-xs font-semibold tracking-wide uppercase text-brand-100" data-i18n="hero_badge">Eksportir & Supplier Rempah Murni Indonesia</span>
+                </div>
+                <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight mb-6" data-i18n="hero_title">
+                    Kekayaan Rempah Autentik Nusantara untuk Pasar Dunia
+                </h1>
+                <p class="text-base sm:text-xl text-slate-200 mb-8 font-light leading-relaxed" data-i18n="hero_desc">
+                    <strong>CakraBuanaJayantara</strong> menyediakan komoditas rempah-rempah pilihan kualitas eksportir terbaik—dipanen langsung dari perkebunan subur Indonesia dengan standar mutu internasional.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#products" class="inline-flex items-center justify-center space-x-3 bg-brand-500 hover:bg-brand-600 text-white font-bold px-8 py-4 rounded-xl shadow-lg hover:shadow-brand-500/40 transition-all text-base">
+                        <span data-i18n="hero_btn_catalog">Lihat Katalog Rempah</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="https://wa.me/6287721953144?text=Halo%20CakraBuanaJayantara,%20saya%20ingin%20tanya%20mengenai%20produk%20rempah." target="_blank" class="inline-flex items-center justify-center space-x-2 bg-herb-500 hover:bg-herb-600 text-white font-semibold px-8 py-4 rounded-xl transition-all text-base shadow-lg">
+                        <i class="fa-brands fa-whatsapp text-xl"></i>
+                        <span data-i18n="hero_btn_wa">Chat WhatsApp Langsung</span>
+                    </a>
+                </div>
+
+                <!-- Stats Bar -->
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-6 mt-16 pt-8 border-t border-white/15">
+                    <div>
+                        <p class="text-3xl font-extrabold text-brand-500">100%</p>
+                        <p class="text-xs sm:text-sm text-slate-300" data-i18n="stat_1">Alami & Bebas Kimia</p>
+                    </div>
+                    <div>
+                        <p class="text-3xl font-extrabold text-brand-500">20+</p>
+                        <p class="text-xs sm:text-sm text-slate-300" data-i18n="stat_2">Negara Tujuan Ekspor</p>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About / Company Profile Section -->
+    <section id="about" class="py-20 bg-white dark:bg-slate-900 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="relative">
+                    <div class="relative rounded-3xl overflow-hidden shadow-2xl">
+                        <img src="Jayantara.png" alt="Perkebunan Rempah CakraBuanaJayantara" class="w-full h-[400px] sm:h-[450px] object-cover">
+                    </div>
+                    <div class="absolute -bottom-6 -right-6 bg-brand-500 text-white p-6 rounded-2xl shadow-xl hidden sm:block max-w-xs">
+                        <i class="fa-solid fa-award text-3xl mb-2"></i>
+                        <p class="font-bold text-base leading-snug" data-i18n="about_badge">Jaminan Kualitas Standar Internasional</p>
+                    </div>
+                </div>
+                <div>
+                    <span class="text-brand-600 dark:text-brand-500 font-extrabold tracking-wider uppercase text-xs" data-i18n="about_subtitle">Profil CakraBuanaJayantara</span>
+                    <h2 class="text-2xl sm:text-4xl font-bold text-slate-900 dark:text-white mt-2 mb-6" data-i18n="about_title">Membawa Harumnya Rempah Tradisional ke Industri Global</h2>
+                    <p class="text-slate-600 dark:text-slate-300 mb-4 leading-relaxed text-sm sm:text-base" data-i18n="about_p1">
+                        <strong>PT CakraBuanaJayantara</strong> adalah perusahaan pemasok dan eksportir komoditas rempah-rempah terkemuka yang berdedikasi memperkenalkan hasil panen terbaik Nusantara ke pasar industri internasional maupun domestik.
+                    </p>
+                    <p class="text-slate-600 dark:text-slate-300 mb-6 leading-relaxed text-sm sm:text-base" data-i18n="about_p2">
+                        Dengan memadukan kearifan lokal, jaringan petani langsung, serta pengawasan mutu bertaraf modern, kami menjamin konsistensi kualitas, kadar air ideal, dan pengiriman yang tepat waktu.
+                    </p>
+                    
+                    <!-- Vision & Mission Mini Cards -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2 mb-6">
+                        <div class="bg-slate-50 dark:bg-slate-800/80 p-4 rounded-xl border border-slate-100 dark:border-slate-700/60">
+                            <h4 class="font-bold text-slate-900 dark:text-white text-sm flex items-center gap-2 mb-1">
+                                <i class="fa-solid fa-eye text-brand-500"></i> <span data-i18n="about_vision_title">Visi Kami</span>
+                            </h4>
+                            <p class="text-xs text-slate-600 dark:text-slate-300" data-i18n="about_vision_desc">Menjadi pilar utama eksportir rempah Indonesia yang tepercaya dan diakui pasar global dengan menghadirkan produk berkualitas, membangun kemitraan berkelanjutan, dan mempromosikan kekayaan warisan rempah-rempah Indonesia kepada dunia.</p>
+                        </div>
+                        <div class="bg-slate-50 dark:bg-slate-800/80 p-4 rounded-xl border border-slate-100 dark:border-slate-700/60">
+                            <h4 class="font-bold text-slate-900 dark:text-white text-sm flex items-center gap-2 mb-1">
+                                <i class="fa-solid fa-bullseye text-brand-500"></i> <span data-i18n="about_mission_title">Misi Kami</span>
+                            </h4>
+                            <p class="text-xs text-slate-600 dark:text-slate-300" data-i18n="about_mission_desc">Memberdayakan petani lokal dan menyediakan rempah murni higienis berstandar ekspor. serta memperkenalkan kekayaan, keragaman, dan karakteristik khas rempah-rempah Indonesia ke pasar Internasional.</p>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="flex items-start space-x-3">
+                            <div class="p-2 bg-brand-100 dark:bg-brand-500/20 text-brand-600 dark:text-brand-400 rounded-lg">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-slate-900 dark:text-white text-sm" data-i18n="about_feature1_title">Organik & Murni</h4>
+                                <p class="text-xs text-slate-500 dark:text-slate-400" data-i18n="about_feature1_desc">Bebas pengawet dan zat aditif</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="p-2 bg-brand-100 dark:bg-brand-500/20 text-brand-600 dark:text-brand-400 rounded-lg">
+                                <i class="fa-solid fa-handshake"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-slate-900 dark:text-white text-sm" data-i18n="about_feature2_title">Kemitraan Berkelanjutan</h4>
+                                <p class="text-xs text-slate-500 dark:text-slate-400" data-i18n="about_feature2_desc">Mendukung taraf hidup petani lokal</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Operational Dashboard Summary Section -->
+    <section id="dashboard" class="py-20 bg-slate-900 dark:bg-slate-950 text-white transition-colors duration-300 border-t border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-brand-500 font-extrabold tracking-wider uppercase text-xs" data-i18n="dash_subtitle">Dashboard Operational Overview</span>
+                <h2 class="text-2xl sm:text-4xl font-bold mt-2" data-i18n="dash_title">Ringkasan Operasional & Kapasitas</h2>
+                <p class="text-slate-400 mt-3 text-sm sm:text-base" data-i18n="dash_desc">Informasi skala operasional, statistik ekspor, dan jaminan sertifikasi CakraBuanaJayantara.</p>
+            </div>
+
+            <!-- Dashboard Stats Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+
+                <div class="bg-slate-800/80 border border-slate-700/80 p-6 rounded-2xl flex items-center justify-between">
+                    <div>
+                        <p class="text-xs text-slate-400 font-medium uppercase" data-i18n="dash_stat3_title">Mitra Petani Terdaftar</p>
+                        <h3 class="text-2xl font-bold mt-1 text-white"><span class="counter" data-target="450"></span> Kemitraan</h3>
+                        <span class="text-xs text-slate-400 flex items-center gap-1 mt-2"><i class="fa-solid fa-location-dot"></i> <span data-i18n="dash_stat3_sub">Jawa, Maluku, Sumatra</span></span>
+                    </div>
+                    <div class="w-12 h-12 bg-blue-500/20 text-blue-400 rounded-xl flex items-center justify-center text-xl">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                </div>
+
+                <div class="bg-slate-800/80 border border-slate-700/80 p-6 rounded-2xl flex items-center justify-between">
+                    <div>
+                        <p class="text-xs text-slate-400 font-medium uppercase" data-i18n="dash_stat4_title">Sertifikasi Mutu</p>
+                        <h3 class="text-2xl font-bold mt-1 text-white">ISO & Organic</h3>
+                        <span class="text-xs text-emerald-400 flex items-center gap-1 mt-2"><i class="fa-solid fa-circle-check"></i> <span data-i18n="dash_stat4_sub">100% Terverifikasi</span></span>
+                    </div>
+                    <div class="w-12 h-12 bg-purple-500/20 text-purple-400 rounded-xl flex items-center justify-center text-xl">
+                        <i class="fa-solid fa-certificate"></i>
+                    </div>
+                </div>
+
+              <div class="bg-slate-800/80 border border-slate-700/80 p-6 rounded-2xl flex items-center justify-between">
+                    <div>
+                        <p class="text-xs text-slate-400 font-medium uppercase" data-i18n="dash_stat4_title">Sertifikasi</p>
+                        <h3 class="text-2xl font-bold mt-1 text-white">PENGAYOMAN</h3>
+                        <span class="text-xs text-emerald-400 flex items-center gap-1 mt-2"><i class="fa-solid fa-circle-check"></i> <span data-i18n="dash_stat4_sub">Terdaftar di Direktorat Jenderal Administrasi Hukum di bawah Kementerian Hukum Republik Indonesia.</span></span>
+                    </div>
+                    <div class="w-12 h-12 bg-purple-500/20 text-purple-400 rounded-xl flex items-center justify-center text-xl">
+                        <i class="fa-solid fa-certificate"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Products Section -->
+    <section id="products" class="py-20 bg-slate-50 dark:bg-slate-900 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-8">
+                <span class="text-brand-600 dark:text-brand-500 font-extrabold tracking-wider uppercase text-xs" data-i18n="prod_subtitle">Katalog Komoditas</span>
+                <h2 class="text-2xl sm:text-4xl font-bold text-slate-900 dark:text-white mt-2" data-i18n="prod_title">Produk Rempah Unggulan</h2>
+                <p class="text-slate-600 dark:text-slate-300 mt-3 text-sm sm:text-base" data-i18n="prod_desc">Pilihan rempah murni bermutu tinggi yang siap memenuhi kebutuhan skala manufaktur, kuliner, maupun farmasi.</p>
+            </div>
+
+            <!-- Interactive Search Bar -->
+            <div class="max-w-md mx-auto mb-8">
+                <div class="relative">
+                    <input type="text" id="searchInput" onkeyup="filterProducts()" placeholder="Cari nama rempah (misal: Lada, Cengkeh, Cinnamon)..." class="w-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full pl-11 pr-4 py-3 text-sm text-slate-800 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-brand-500 shadow-sm transition-all">
+                    <i class="fa-solid fa-magnifying-glass absolute left-4 top-3.5 text-slate-400"></i>
+                </div>
+            </div>
+
+            <!-- Category Filter Buttons -->
+            <div class="flex flex-wrap justify-center gap-2 mb-10">
+                <button class="filter-btn active bg-brand-500 text-white px-5 py-2 rounded-full text-xs sm:text-sm font-semibold shadow transition-all" data-filter="all" data-i18n="filter_all">Semua Rempah</button>
+                <button class="filter-btn bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 px-5 py-2 rounded-full text-xs sm:text-sm font-semibold border border-slate-200 dark:border-slate-700 transition-all" data-filter="biji" data-i18n="filter_seeds">Biji-bijian</button>
+                <button class="filter-btn bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 px-5 py-2 rounded-full text-xs sm:text-sm font-semibold border border-slate-200 dark:border-slate-700 transition-all" data-filter="batang" data-i18n="filter_bark">Batang & Bunga</button>
+                <button class="filter-btn bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 px-5 py-2 rounded-full text-xs sm:text-sm font-semibold border border-slate-200 dark:border-slate-700 transition-all" data-filter="rimpang" data-i18n="filter_roots">Rimpang / Akar</button>
+            </div>
+
+            <!-- Product Cards Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="productGrid">
+                <!-- Card 1 -->
+                <div class="product-card bg-white dark:bg-slate-800/90 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-slate-100 dark:border-slate-700/60" data-category="batang">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="Bunga cengkeh.png" alt="Bunga cengkeh" class="w-full h-full object-cover">
+                        <span class="absolute top-4 left-4 bg-brand-500 text-white text-xs font-bold px-3 py-1 rounded-full">Grade A</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="product-title text-xl font-bold text-slate-900 dark:text-white mb-2">Bunga Cengkeh (Clove Flower)</h3>
+                        <p class="product-desc text-slate-600 dark:text-slate-300 text-sm mb-4">Bunga cengkeh segar pilihan dengan aroma kuat, cocok untuk distilasi minyak atsiri dan bahan baku rempah.</p>
+                        <div class="flex items-center justify-between pt-4 border-t border-slate-100 dark:border-slate-700/60">
+                            <span class="text-xs text-slate-500 dark:text-slate-400"><span data-i18n="moq">Min. Order</span>: <strong>100 kg</strong></span>
+                            <button onclick="openModal('Bunga Cengkeh (Clove Flower)')" class="text-brand-600 dark:text-brand-400 hover:text-brand-800 text-xs font-bold flex items-center space-x-1">
+                                <span data-i18n="btn_specs">Detail Spesifikasi</span>
+                                <i class="fa-solid fa-chevron-right text-xs"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="product-card bg-white dark:bg-slate-800/90 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-slate-100 dark:border-slate-700/60" data-category="batang">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="Cengkeh.png" alt="Cengkeh kering" class="w-full h-full object-cover">
+                        <span class="absolute top-4 left-4 bg-brand-500 text-white text-xs font-bold px-3 py-1 rounded-full">Export Quality</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="product-title text-xl font-bold text-slate-900 dark:text-white mb-2">Cengkeh (Dried Cloves)</h3>
+                        <p class="product-desc text-slate-600 dark:text-slate-300 text-sm mb-4">Cengkeh kering dari Maluku &amp; Jawa dengan kadar minyak atsiri tinggi, disortir manual untuk kebutuhan ekspor.</p>
+                        <div class="flex items-center justify-between pt-4 border-t border-slate-100 dark:border-slate-700/60">
+                            <span class="text-xs text-slate-500 dark:text-slate-400"><span data-i18n="moq">Min. Order</span>: <strong>100 kg</strong></span>
+                            <button onclick="openModal('Cengkeh (Dried Cloves)')" class="text-brand-600 dark:text-brand-400 hover:text-brand-800 text-xs font-bold flex items-center space-x-1">
+                                <span data-i18n="btn_specs">Detail Spesifikasi</span>
+                                <i class="fa-solid fa-chevron-right text-xs"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="product-card bg-white dark:bg-slate-800/90 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-slate-100 dark:border-slate-700/60" data-category="rimpang">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="Jahe k.png" alt="Jahe kering" class="w-full h-full object-cover">
+                        <span class="absolute top-4 left-4 bg-brand-500 text-white text-xs font-bold px-3 py-1 rounded-full">Dried Slice</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="product-title text-xl font-bold text-slate-900 dark:text-white mb-2">Jahe Kering (Dried Ginger)</h3>
+                        <p class="product-desc text-slate-600 dark:text-slate-300 text-sm mb-4">Irisan jahe kering dengan aroma hangat kuat dan kadar air terkontrol, siap untuk industri jamu dan bumbu.</p>
+                        <div class="flex items-center justify-between pt-4 border-t border-slate-100 dark:border-slate-700/60">
+                            <span class="text-xs text-slate-500 dark:text-slate-400"><span data-i18n="moq">Min. Order</span>: <strong>50 kg</strong></span>
+                            <button onclick="openModal('Jahe Kering (Dried Ginger)')" class="text-brand-600 dark:text-brand-400 hover:text-brand-800 text-xs font-bold flex items-center space-x-1">
+                                <span data-i18n="btn_specs">Detail Spesifikasi</span>
+                                <i class="fa-solid fa-chevron-right text-xs"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="product-card bg-white dark:bg-slate-800/90 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-slate-100 dark:border-slate-700/60" data-category="rimpang">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="Jahe.png" alt="Jahe segar" class="w-full h-full object-cover">
+                        <span class="absolute top-4 left-4 bg-brand-500 text-white text-xs font-bold px-3 py-1 rounded-full">Fresh</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="product-title text-xl font-bold text-slate-900 dark:text-white mb-2">Jahe Segar (Fresh Ginger)</h3>
+                        <p class="product-desc text-slate-600 dark:text-slate-300 text-sm mb-4">Jahe segar pilihan dari petani lokal, bersih dan beraroma tajam untuk kebutuhan dapur maupun industri.</p>
+                        <div class="flex items-center justify-between pt-4 border-t border-slate-100 dark:border-slate-700/60">
+                            <span class="text-xs text-slate-500 dark:text-slate-400"><span data-i18n="moq">Min. Order</span>: <strong>100 kg</strong></span>
+                            <button onclick="openModal('Jahe Segar (Fresh Ginger)')" class="text-brand-600 dark:text-brand-400 hover:text-brand-800 text-xs font-bold flex items-center space-x-1">
+                                <span data-i18n="btn_specs">Detail Spesifikasi</span>
+                                <i class="fa-solid fa-chevron-right text-xs"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="product-card bg-white dark:bg-slate-800/90 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-slate-100 dark:border-slate-700/60" data-category="batang">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="Kayu manis.png" alt="Kayu manis" class="w-full h-full object-cover">
+                        <span class="absolute top-4 left-4 bg-brand-500 text-white text-xs font-bold px-3 py-1 rounded-full">Stick</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="product-title text-xl font-bold text-slate-900 dark:text-white mb-2">Kayu Manis (Cinnamon Stick)</h3>
+                        <p class="product-desc text-slate-600 dark:text-slate-300 text-sm mb-4">Kayu manis Kerinci berupa batang gulung dengan aroma manis khas, tersedia dalam grade ekspor.</p>
+                        <div class="flex items-center justify-between pt-4 border-t border-slate-100 dark:border-slate-700/60">
+                            <span class="text-xs text-slate-500 dark:text-slate-400"><span data-i18n="moq">Min. Order</span>: <strong>200 kg</strong></span>
+                            <button onclick="openModal('Kayu Manis (Cinnamon Stick)')" class="text-brand-600 dark:text-brand-400 hover:text-brand-800 text-xs font-bold flex items-center space-x-1">
+                                <span data-i18n="btn_specs">Detail Spesifikasi</span>
+                                <i class="fa-solid fa-chevron-right text-xs"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="product-card bg-white dark:bg-slate-800/90 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-slate-100 dark:border-slate-700/60" data-category="rimpang">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="Kunyit k.png" alt="Kunyit kering" class="w-full h-full object-cover">
+                        <span class="absolute top-4 left-4 bg-brand-500 text-white text-xs font-bold px-3 py-1 rounded-full">Dried Slice</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="product-title text-xl font-bold text-slate-900 dark:text-white mb-2">Kunyit Kering (Dried Turmeric)</h3>
+                        <p class="product-desc text-slate-600 dark:text-slate-300 text-sm mb-4">Irisan kunyit kering berwarna pekat dengan kandungan kurkumin tinggi, ideal untuk jamu dan suplemen.</p>
+                        <div class="flex items-center justify-between pt-4 border-t border-slate-100 dark:border-slate-700/60">
+                            <span class="text-xs text-slate-500 dark:text-slate-400"><span data-i18n="moq">Min. Order</span>: <strong>200 kg</strong></span>
+                            <button onclick="openModal('Kunyit Kering (Dried Turmeric)')" class="text-brand-600 dark:text-brand-400 hover:text-brand-800 text-xs font-bold flex items-center space-x-1">
+                                <span data-i18n="btn_specs">Detail Spesifikasi</span>
+                                <i class="fa-solid fa-chevron-right text-xs"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 7 -->
+                <div class="product-card bg-white dark:bg-slate-800/90 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-slate-100 dark:border-slate-700/60" data-category="rimpang">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="Kunyit.png" alt="Kunyit segar" class="w-full h-full object-cover">
+                        <span class="absolute top-4 left-4 bg-brand-500 text-white text-xs font-bold px-3 py-1 rounded-full">Fresh</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="product-title text-xl font-bold text-slate-900 dark:text-white mb-2">Kunyit Segar (Fresh Turmeric)</h3>
+                        <p class="product-desc text-slate-600 dark:text-slate-300 text-sm mb-4">Rimpang kunyit segar pilihan dengan warna oranye alami dan aroma khas, siap dikirim dalam keadaan segar.</p>
+                        <div class="flex items-center justify-between pt-4 border-t border-slate-100 dark:border-slate-700/60">
+                            <span class="text-xs text-slate-500 dark:text-slate-400"><span data-i18n="moq">Min. Order</span>: <strong>200 kg</strong></span>
+                            <button onclick="openModal('Kunyit Segar (Fresh Turmeric)')" class="text-brand-600 dark:text-brand-400 hover:text-brand-800 text-xs font-bold flex items-center space-x-1">
+                                <span data-i18n="btn_specs">Detail Spesifikasi</span>
+                                <i class="fa-solid fa-chevron-right text-xs"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 8 -->
+                <div class="product-card bg-white dark:bg-slate-800/90 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-slate-100 dark:border-slate-700/60" data-category="rimpang">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="Lengkuas.png" alt="Lengkuas segar" class="w-full h-full object-cover">
+                        <span class="absolute top-4 left-4 bg-brand-500 text-white text-xs font-bold px-3 py-1 rounded-full">Fresh</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="product-title text-xl font-bold text-slate-900 dark:text-white mb-2">Lengkuas Segar (Fresh Galangal)</h3>
+                        <p class="product-desc text-slate-600 dark:text-slate-300 text-sm mb-4">Lengkuas segar beraroma tajam dengan rimpang padat, cocok untuk bumbu dapur dan bahan industri.</p>
+                        <div class="flex items-center justify-between pt-4 border-t border-slate-100 dark:border-slate-700/60">
+                            <span class="text-xs text-slate-500 dark:text-slate-400"><span data-i18n="moq">Min. Order</span>: <strong>200 kg</strong></span>
+                            <button onclick="openModal('Lengkuas Segar (Fresh Galangal)')" class="text-brand-600 dark:text-brand-400 hover:text-brand-800 text-xs font-bold flex items-center space-x-1">
+                                <span data-i18n="btn_specs">Detail Spesifikasi</span>
+                                <i class="fa-solid fa-chevron-right text-xs"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 9 -->
+                <div class="product-card bg-white dark:bg-slate-800/90 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-slate-100 dark:border-slate-700/60" data-category="biji">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="Pala.png" alt="Pala" class="w-full h-full object-cover">
+                        <span class="absolute top-4 left-4 bg-brand-500 text-white text-xs font-bold px-3 py-1 rounded-full">ABCD</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="product-title text-xl font-bold text-slate-900 dark:text-white mb-2">Pala (Nutmeg)</h3>
+                        <p class="product-desc text-slate-600 dark:text-slate-300 text-sm mb-4">Biji pala utuh tanpa cangkang dari Banda &amp; Sulawesi, berkualitas tinggi untuk industri ekstraksi.</p>
+                        <div class="flex items-center justify-between pt-4 border-t border-slate-100 dark:border-slate-700/60">
+                            <span class="text-xs text-slate-500 dark:text-slate-400"><span data-i18n="moq">Min. Order</span>: <strong>200 kg</strong></span>
+                            <button onclick="openModal('Pala (Nutmeg)')" class="text-brand-600 dark:text-brand-400 hover:text-brand-800 text-xs font-bold flex items-center space-x-1">
+                                <span data-i18n="btn_specs">Detail Spesifikasi</span>
+                                <i class="fa-solid fa-chevron-right text-xs"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 10 -->
+                <div class="product-card bg-white dark:bg-slate-800/90 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-slate-100 dark:border-slate-700/60" data-category="batang">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="Sereh k.png" alt="Sereh kering" class="w-full h-full object-cover">
+                        <span class="absolute top-4 left-4 bg-brand-500 text-white text-xs font-bold px-3 py-1 rounded-full">Dried Stalks</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="product-title text-xl font-bold text-slate-900 dark:text-white mb-2">Sereh Kering (Dried Lemongrass)</h3>
+                        <p class="product-desc text-slate-600 dark:text-slate-300 text-sm mb-4">Sereh kering dengan aroma sitral kuat, dipotong dan dikeringkan higienis untuk teh, bumbu, dan industri.</p>
+                        <div class="flex items-center justify-between pt-4 border-t border-slate-100 dark:border-slate-700/60">
+                            <span class="text-xs text-slate-500 dark:text-slate-400"><span data-i18n="moq">Min. Order</span>: <strong>200 kg</strong></span>
+                            <button onclick="openModal('Sereh Kering (Dried Lemongrass)')" class="text-brand-600 dark:text-brand-400 hover:text-brand-800 text-xs font-bold flex items-center space-x-1">
+                                <span data-i18n="btn_specs">Detail Spesifikasi</span>
+                                <i class="fa-solid fa-chevron-right text-xs"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 11 -->
+                <div class="product-card bg-white dark:bg-slate-800/90 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-slate-100 dark:border-slate-700/60" data-category="biji">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="candlenut.jpeg" alt="Kemiri" class="w-full h-full object-cover">
+                        <span class="absolute top-4 left-4 bg-brand-500 text-white text-xs font-bold px-3 py-1 rounded-full">Dried</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="product-title text-xl font-bold text-slate-900 dark:text-white mb-2">Kemiri (Candlenut)</h3>
+                        <p class="product-desc text-slate-600 dark:text-slate-300 text-sm mb-4">Kemiri kering pilihan dengan tekstur padat dan warna alami, bahan penting untuk bumbu dan industri makanan.</p>
+                        <div class="flex items-center justify-between pt-4 border-t border-slate-100 dark:border-slate-700/60">
+                            <span class="text-xs text-slate-500 dark:text-slate-400"><span data-i18n="moq">Min. Order</span>: <strong>200 kg</strong></span>
+                            <button onclick="openModal('Kemiri (Candlenut)')" class="text-brand-600 dark:text-brand-400 hover:text-brand-800 text-xs font-bold flex items-center space-x-1">
+                                <span data-i18n="btn_specs">Detail Spesifikasi</span>
+                                <i class="fa-solid fa-chevron-right text-xs"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 12 -->
+                <div class="product-card bg-white dark:bg-slate-800/90 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-slate-100 dark:border-slate-700/60" data-category="biji">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="star anise.jpeg" alt="Bunga lawang" class="w-full h-full object-cover">
+                        <span class="absolute top-4 left-4 bg-brand-500 text-white text-xs font-bold px-3 py-1 rounded-full">Dried</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="product-title text-xl font-bold text-slate-900 dark:text-white mb-2">Bunga Lawang (Star Anise)</h3>
+                        <p class="product-desc text-slate-600 dark:text-slate-300 text-sm mb-4">Bunga lawang kering beraroma manis khas, cocok untuk bumbu, minuman, dan campuran rempah.</p>
+                        <div class="flex items-center justify-between pt-4 border-t border-slate-100 dark:border-slate-700/60">
+                            <span class="text-xs text-slate-500 dark:text-slate-400"><span data-i18n="moq">Min. Order</span>: <strong>200 kg</strong></span>
+                            <button onclick="openModal('Bunga Lawang (Star Anise)')" class="text-brand-600 dark:text-brand-400 hover:text-brand-800 text-xs font-bold flex items-center space-x-1">
+                                <span data-i18n="btn_specs">Detail Spesifikasi</span>
+                                <i class="fa-solid fa-chevron-right text-xs"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 13 -->
+                <div class="product-card bg-white dark:bg-slate-800/90 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-slate-100 dark:border-slate-700/60" data-category="batang">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="cin pow.jpeg" alt="Kayu manis bubuk" class="w-full h-full object-cover">
+                        <span class="absolute top-4 left-4 bg-brand-500 text-white text-xs font-bold px-3 py-1 rounded-full">Powder</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="product-title text-xl font-bold text-slate-900 dark:text-white mb-2">Kayu Manis Bubuk (Cinnamon Powder)</h3>
+                        <p class="product-desc text-slate-600 dark:text-slate-300 text-sm mb-4">Bubuk kayu manis Kerinci halus dengan aroma harum manis, siap pakai untuk industri makanan dan minuman.</p>
+                        <div class="flex items-center justify-between pt-4 border-t border-slate-100 dark:border-slate-700/60">
+                            <span class="text-xs text-slate-500 dark:text-slate-400"><span data-i18n="moq">Min. Order</span>: <strong>200 kg</strong></span>
+                            <button onclick="openModal('Kayu Manis Bubuk (Cinnamon Powder)')" class="text-brand-600 dark:text-brand-400 hover:text-brand-800 text-xs font-bold flex items-center space-x-1">
+                                <span data-i18n="btn_specs">Detail Spesifikasi</span>
+                                <i class="fa-solid fa-chevron-right text-xs"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 14 -->
+                <div class="product-card bg-white dark:bg-slate-800/90 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-slate-100 dark:border-slate-700/60" data-category="rimpang">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="Turmuric P.jpeg" alt="Kunyit bubuk" class="w-full h-full object-cover">
+                        <span class="absolute top-4 left-4 bg-brand-500 text-white text-xs font-bold px-3 py-1 rounded-full">Powder</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="product-title text-xl font-bold text-slate-900 dark:text-white mb-2">Kunyit Bubuk (Turmeric Powder)</h3>
+                        <p class="product-desc text-slate-600 dark:text-slate-300 text-sm mb-4">Bubuk kunyit dengan warna kuning pekat dan kandungan kurkumin tinggi untuk bumbu, jamu, dan suplemen.</p>
+                        <div class="flex items-center justify-between pt-4 border-t border-slate-100 dark:border-slate-700/60">
+                            <span class="text-xs text-slate-500 dark:text-slate-400"><span data-i18n="moq">Min. Order</span>: <strong>200 kg</strong></span>
+                            <button onclick="openModal('Kunyit Bubuk (Turmeric Powder)')" class="text-brand-600 dark:text-brand-400 hover:text-brand-800 text-xs font-bold flex items-center space-x-1">
+                                <span data-i18n="btn_specs">Detail Spesifikasi</span>
+                                <i class="fa-solid fa-chevron-right text-xs"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Advantages Section -->
+    <section id="advantages" class="py-20 bg-brand-900 dark:bg-slate-950 text-white transition-colors duration-300 border-t border-brand-800/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-brand-500 font-extrabold tracking-wider uppercase text-xs" data-i18n="adv_subtitle">Alasan Memilih Kami</span>
+                <h2 class="text-2xl sm:text-4xl font-bold mt-2" data-i18n="adv_title">Keunggulan CakraBuanaJayantara</h2>
+                <p class="text-slate-300 mt-3 text-sm sm:text-base" data-i18n="adv_desc">Komitmen kami dalam menghadirkan standar layanan terbaik bagi setiap mitra bisnis.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-brand-800/60 dark:bg-slate-900/80 border border-brand-500/20 dark:border-slate-800 p-8 rounded-2xl hover:border-brand-500 transition-all">
+                    <div class="w-14 h-14 bg-brand-500/20 text-brand-500 rounded-2xl flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3" data-i18n="adv1_title">Kontrol Mutu Ketat</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed" data-i18n="adv1_desc">Setiap komoditas melewati sortir manual dan pengujian kadar air ketat sebelum pengemasan akhir.</p>
+                </div>
+
+                <div class="bg-brand-800/60 dark:bg-slate-900/80 border border-brand-500/20 dark:border-slate-800 p-8 rounded-2xl hover:border-brand-500 transition-all">
+                    <div class="w-14 h-14 bg-brand-500/20 text-brand-500 rounded-2xl flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-truck-fast"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3" data-i18n="adv2_title">Logistik Aman & Cepat</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed" data-i18n="adv2_desc">Dukungan jaringan pengiriman darat & laut dengan kemasan vakum tahan gores untuk pengiriman domestik & internasional.</p>
+                </div>
+
+                <div class="bg-brand-800/60 dark:bg-slate-900/80 border border-brand-500/20 dark:border-slate-800 p-8 rounded-2xl hover:border-brand-500 transition-all">
+                    <div class="w-14 h-14 bg-brand-500/20 text-brand-500 rounded-2xl flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-tags"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3" data-i18n="adv3_title">Harga Kompetitif Direct-Farmer</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed" data-i18n="adv3_desc">Kemitraan langsung dengan petani tanpa perantara berlebih menjamin harga pasokan terbaik bagi bisnis Anda.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Inquiry Section -->
+    <section id="contact" class="py-20 bg-slate-50 dark:bg-slate-900 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Info Left -->
+                <div>
+                    <span class="text-brand-600 dark:text-brand-500 font-extrabold tracking-wider uppercase text-xs" data-i18n="contact_subtitle">Hubungi CakraBuanaJayantara</span>
+                    <h2 class="text-2xl sm:text-4xl font-bold text-slate-900 dark:text-white mt-2 mb-6" data-i18n="contact_title">Siap Bekerja Sama dengan Bisnis Anda</h2>
+                    <p class="text-slate-600 dark:text-slate-300 mb-8 leading-relaxed text-sm sm:text-base" data-i18n="contact_desc">
+                        Silakan tinggalkan pesan atau konsultasikan kebutuhan pasokan komoditas rempah usaha Anda melalui form inquiry atau langsung chat via WhatsApp.
+                    </p>
+
+                    <div class="space-y-6 mb-8">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-slate-200 dark:border-slate-700 flex items-center justify-center text-brand-600 dark:text-brand-400 text-xl shrink-0">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 dark:text-white" data-i18n="addr_title">Alamat Kantor Utama</h4>
+                                <p class="text-slate-600 dark:text-slate-300 text-sm mt-1">Jl.Purwosenjoto Gintung, Bulukerto, Kota Batu, Jawa Timur, Indonesia.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-slate-200 dark:border-slate-700 flex items-center justify-center text-brand-600 dark:text-brand-400 text-xl shrink-0">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div class="w-full">
+                                <h4 class="font-bold text-slate-900 dark:text-white" data-i18n="email_title">Email Resmi</h4>
+                                <div class="flex items-center gap-2 mt-1">
+                                    <span class="text-slate-600 dark:text-slate-300 text-sm">cakrabuanajayantara@gmail.com</span>
+                                    <button onclick="copyEmail()" class="text-xs text-brand-500 hover:text-brand-600 underline font-semibold" title="Salin Email">
+                                        <i class="fa-regular fa-copy"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-slate-200 dark:border-slate-700 flex items-center justify-center text-emerald-600 dark:text-emerald-400 text-2xl shrink-0">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 dark:text-white" data-i18n="phone_title">WhatsApp / Direct Call</h4>
+                                <p class="text-slate-600 dark:text-slate-300 text-sm mt-1">+62 877-2195-3144 (Customer Care 24/7)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Direct WhatsApp Quick Action Card -->
+                    <div class="bg-herb-500 text-white p-6 rounded-2xl shadow-lg flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                        <div>
+                            <h4 class="font-bold text-base sm:text-lg" data-i18n="wa_card_title">Respon Cepat via WhatsApp</h4>
+                            <p class="text-xs text-emerald-100 mt-1" data-i18n="wa_card_desc">Konsultasikan spesifikasi & sampel rempah langsung dengan tim sales kami.</p>
+                        </div>
+                        <a href="https://wa.me/6287721953144?text=Halo%20CakraBuanaJayantara,%20saya%20ingin%20bertanya%20mengenai%20penawaran%20rempah." target="_blank" class="bg-white text-herb-600 font-bold px-5 py-3 rounded-xl hover:bg-emerald-50 transition-all text-xs sm:text-sm shrink-0 flex items-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-lg"></i> <span data-i18n="wa_card_btn">Chat Sekarang</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Form Right -->
+                <div class="bg-white dark:bg-slate-800/90 p-6 sm:p-8 rounded-3xl shadow-lg border border-slate-100 dark:border-slate-700/60">
+                    <h3 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white mb-6" data-i18n="form_heading">Kirim Inquiry Pesanan</h3>
+                    <form id="contactForm" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                        <div>
+                            <label class="block text-xs sm:text-sm font-semibold text-slate-700 dark:text-slate-300 mb-1" data-i18n="form_name_label">Nama Lengkap / Perusahaan</label>
+                            <input type="text" required placeholder="Contoh: PT Kuliner Nusantara" class="w-full bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 text-sm text-slate-800 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-brand-500">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs sm:text-sm font-semibold text-slate-700 dark:text-slate-300 mb-1" data-i18n="form_email_label">Email</label>
+                            <input type="email" required placeholder="nama@perusahaan.com" class="w-full bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 text-sm text-slate-800 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-brand-500">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs sm:text-sm font-semibold text-slate-700 dark:text-slate-300 mb-1" data-i18n="form_msg_label">Pesan / Kebutuhan Rempah</label>
+                            <textarea rows="4" required placeholder="Tuliskan komoditas, estimasi kuantitas, serta tujuan pengiriman..." class="w-full bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 text-sm text-slate-800 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-brand-500"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-brand-500 hover:bg-brand-600 text-white font-bold py-3.5 rounded-xl transition-all shadow-md text-sm" data-i18n="form_btn">
+                            Kirim Pesan Sekarang
+                        </button>
+                    </form>
+
+                    <!-- Alert Box Container -->
+                    <div id="formAlert" class="hidden mt-4 p-4 rounded-xl text-xs sm:text-sm font-medium"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-900 dark:bg-slate-950 text-slate-400 py-12 border-t border-brand-800 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <div class="md:col-span-2">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-8 h-8 rounded-lg bg-brand-500 text-white flex items-center justify-center font-bold">
+                            <i class="logo c.png"></i>
+                            <img src="logo c.png">
+                          
+                        </div>
+                        <span class="text-xl font-extrabold text-white">CakraBuanaJayantara</span>
+                    </div>
+                    <p class="text-xs sm:text-sm text-slate-400 max-w-sm leading-relaxed" data-i18n="footer_desc">
+                        Pemasok terpercaya komoditas rempah murni Nusantara dengan jaminan kualitas terbaik untuk pasar lokal maupun mancanegara.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-4 text-xs sm:text-sm tracking-wider uppercase" data-i18n="footer_nav_title">Navigasi Cepat</h4>
+                    <ul class="space-y-2 text-xs sm:text-sm">
+                        <li><a href="#about" data-i18n="nav_about" class="hover:text-white transition-colors">Profil Perusahaan</a></li>
+                        <li><a href="#dashboard" data-i18n="nav_dashboard" class="hover:text-white transition-colors">Dashboard Operasional</a></li>
+                        <li><a href="#products" data-i18n="nav_products" class="hover:text-white transition-colors">Katalog Rempah</a></li>
+                        <li><a href="#advantages" data-i18n="nav_advantages" class="hover:text-white transition-colors">Keunggulan</a></li>
+                        <li><a href="#contact" data-i18n="nav_contact" class="hover:text-white transition-colors">Kontak</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-4 text-xs sm:text-sm tracking-wider uppercase" data-i18n="footer_social_title">Media Sosial Kami</h4>
+                    <p class="text-xs text-slate-400 mb-4" data-i18n="footer_social_desc">Ikuti saluran resmi kami untuk update stok dan berita ekspor:</p>
+                    <div class="flex space-x-3">
+                       
+                        <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn" class="w-10 h-10 rounded-full bg-brand-800 dark:bg-slate-800 text-slate-300 hover:text-white hover:bg-brand-500 flex items-center justify-center transition-all"><i class="fa-brands fa-linkedin-in text-lg"></i></a>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-brand-800 dark:border-slate-800 text-center text-xs text-slate-500">
+                <p>&copy; 2026 PT CakraBuanaJayantara. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Fixed Floating WhatsApp Button -->
+    <a href="https://wa.me/6287721953144?text=Halo%20CakraBuanaJayantara,%20saya%20tertarik%20dengan%20produk%20rempah%20Anda." target="_blank" class="fixed bottom-6 right-6 z-50 bg-emerald-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl hover:bg-emerald-600 hover:scale-110 transition-all" aria-label="Chat via WhatsApp">
+        <i class="fa-brands fa-whatsapp text-3xl"></i>
+    </a>
+
+    <!-- Modal Product Detail -->
+    <div id="productModal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white dark:bg-slate-800 rounded-3xl max-w-lg w-full p-6 sm:p-8 relative shadow-2xl border border-slate-100 dark:border-slate-700">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 p-2">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+            <h3 id="modalTitle" class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white mb-4">Detail Spesifikasi</h3>
+            <div id="modalBody" class="space-y-3 text-slate-600 dark:text-slate-300 text-xs sm:text-sm leading-relaxed mb-6">
+                <!-- Content dynamically populated -->
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <button id="modalWaBtn" onclick="requestModalSample()" class="bg-herb-500 hover:bg-herb-600 text-white font-bold py-3 px-4 rounded-xl transition-all text-xs sm:text-sm flex items-center justify-center space-x-2">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    <span>Minta Sampel Produk</span>
+                </button>
+                <button onclick="closeModal()" class="bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-200 font-bold py-3 px-4 rounded-xl hover:bg-slate-200 dark:hover:bg-slate-600 transition-all text-xs sm:text-sm">
+                    Tutup
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Interactive Toast Notification -->
+    <div id="toastNotification" class="fixed bottom-24 right-6 z-50 bg-slate-900 text-white text-xs sm:text-sm px-5 py-3 rounded-xl shadow-2xl transition-all duration-300 opacity-0 pointer-events-none transform translate-y-4 flex items-center gap-2 border border-slate-700">
+        <i class="fa-solid fa-circle-check text-emerald-400"></i>
+        <span id="toastMsg">Notifikasi</span>
+    </div>
+
+    <!-- Scripts for Interactivity, Multi-language & Theme Toggle -->
+    <script>
+        // --- Theme Toggle Logic (Dark/Light Mode) ---
+        const themeToggleBtn = document.getElementById('themeToggle');
+
+        // Check stored theme or system preference
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+
+        themeToggleBtn.addEventListener('click', () => {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.theme = 'light';
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.theme = 'dark';
+            }
+        });
+
+        // --- Multi-Language Dictionary ---
+        const translations = {
+            id: {
+                nav_about: "Profil Perusahaan",
+                nav_dashboard: "Dashboard Operasional",
+                nav_calculator: "Kalkulator Estimasi",
+                nav_products: "Produk Rempah",
+                nav_advantages: "Keunggulan",
+                nav_contact: "Kontak",
+                btn_whatsapp: "WhatsApp",
+                hero_badge: "Eksportir & Supplier Rempah Murni Indonesia",
+                hero_title: "Kekayaan Rempah Autentik Nusantara untuk Pasar Dunia",
+                hero_desc: "CakraBuanaJayantara menyediakan komoditas rempah-rempah pilihan kualitas eksportir terbaik—dipanen langsung dari perkebunan subur Indonesia dengan standar mutu internasional.",
+                hero_btn_catalog: "Lihat Katalog Rempah",
+                hero_btn_wa: "Chat WhatsApp Langsung",
+                stat_1: "Alami & Bebas Kimia",
+                stat_2: "Negara Tujuan Ekspor",
+                stat_3: "Kapasitas Pasokan / Tahun",
+                about_subtitle: "Profil CakraBuanaJayantara",
+                about_title: "Membawa Harumnya Rempah Tradisional ke Industri Global",
+                about_p1: "PT CakraBuanaJayantara adalah perusahaan pemasok dan eksportir komoditas rempah-rempah terkemuka yang berdedikasi memperkenalkan hasil panen terbaik Nusantara ke pasar industri internasional maupun domestik.",
+                about_p2: "Dengan memadukan kearifan lokal, jaringan petani langsung, serta pengawasan mutu bertaraf modern, kami menjamin konsistensi kualitas, kadar air ideal, dan pengiriman yang tepat waktu.",
+                about_badge: "Jaminan Kualitas Standar Internasional",
+                about_vision_title: "Visi Kami",
+                about_vision_desc: "Menjadi pilar utama eksportir rempah Indonesia yang tepercaya, berdaya saing global, dan berkelanjutan.",
+                about_mission_title: "Misi Kami",
+                about_mission_desc: "Memberdayakan petani lokal dan menyediakan rempah murni higienis berstandar ekspor.",
+                about_feature1_title: "Organik & Murni",
+                about_feature1_desc: "Bebas pengawet dan zat aditif",
+                about_feature2_title: "Kemitraan Berkelanjutan",
+                about_feature2_desc: "Mendukung taraf hidup petani lokal",
+                dash_subtitle: "Dashboard Operational Overview",
+                dash_title: "Ringkasan Operasional & Kapasitas",
+                dash_desc: "Informasi skala operasional, statistik ekspor, dan jaminan sertifikasi CakraBuanaJayantara.",
+                dash_stat1_title: "Total Kapasitas Gudang",
+                dash_stat1_sub: "+15% bulan ini",
+                dash_stat2_title: "Pengiriman Aktif",
+                dash_stat2_sub: "Dalam pelayaran",
+                dash_stat3_title: "Mitra Petani Terdaftar",
+                dash_stat3_sub: "Jawa, Maluku, Sumatra",
+                dash_stat4_title: "Sertifikasi Mutu",
+                dash_stat4_sub: "100% Terverifikasi",
+                calc_subtitle: "Kalkulator Estimasi Cepat",
+                calc_title: "Simulasi Estimasi Biaya & Pesanan Rempah",
+                calc_desc: "Pilih komoditas, jumlah kuantitas, serta mata uang untuk melihat perkiraan biaya pesanan grosir secara instan.",
+                calc_lbl_spice: "Pilih Rempah",
+                calc_lbl_qty: "Kuantitas (kg)",
+                calc_lbl_curr: "Mata Uang",
+                calc_total_label: "Estimasi Total Biaya",
+                calc_note: "*Harga estimasi FOB (Free On Board), belum termasuk biaya pengapalan luar negeri.",
+                calc_btn_wa: "Minta Penawaran Resmi",
+                prod_subtitle: "Katalog Komoditas",
+                prod_title: "Produk Rempah Unggulan",
+                prod_desc: "Pilihan rempah murni bermutu tinggi yang siap memenuhi kebutuhan skala manufaktur, kuliner, maupun farmasi.",
+                filter_all: "Semua Rempah",
+                filter_seeds: "Biji-bijian",
+                filter_bark: "Batang & Bunga",
+                filter_roots: "Rimpang / Akar",
+                moq: "Min. Order",
+                btn_specs: "Detail Spesifikasi",
+                p1_name: "Cengkeh Kering (Cloves)",
+                p1_desc: "Aroma tajam khas dengan kadar minyak atsiri tinggi, dipetik dari kebun terbaik Maluku & Jawa.",
+                p2_name: "Lada Hitam (Black Pepper)",
+                p2_desc: "Lada Hitam Lampung utuh dengan tingkat pedas intens, dikeringkan sempurna untuk daya simpan lama.",
+                p3_name: "Kayu Manis (Cinnamon)",
+                p3_desc: "Kayu manis Kerinci beraroma harum manis khas. Tersedia dalam bentuk batang gulung maupun bubuk.",
+                p4_name: "Biji Pala & Fuli (Nutmeg & Mace)",
+                p4_desc: "Pala utuh tanpa cangkang berkualitas tinggi dari Banda & Sulawesi. Pilihan tepat industri ekstraksi.",
+                p5_name: "Kunyit Kering (Turmeric Slice)",
+                p5_desc: "Rimpang kunyit iris yang dikeringkan secara alami, warna kuning pekat alami ideal untuk jamu & suplemen.",
+                p6_name: "Jahe Kering (Ginger Dried)",
+                p6_desc: "Jahe pilihan beraroma hangat kuat, diproses dengan tingkat kelembapan terkontrol untuk mencegah jamur.",
+                adv_subtitle: "Alasan Memilih Kami",
+                adv_title: "Keunggulan CakraBuanaJayantara",
+                adv_desc: "Komitmen kami dalam menghadirkan standar layanan terbaik bagi setiap mitra bisnis.",
+                adv1_title: "Kontrol Mutu Ketat",
+                adv1_desc: "Setiap komoditas melewati sortir manual dan pengujian kadar air ketat sebelum pengemasan akhir.",
+                adv2_title: "Logistik Aman & Cepat",
+                adv2_desc: "Dukungan jaringan pengiriman darat & laut dengan kemasan vakum tahan gores untuk pengiriman domestik & internasional.",
+                adv3_title: "Harga Kompetitif Direct-Farmer",
+                adv3_desc: "Kemitraan langsung dengan petani tanpa perantara berlebih menjamin harga pasokan terbaik bagi bisnis Anda.",
+                contact_subtitle: "Hubungi CakraBuanaJayantara",
+                contact_title: "Siap Bekerja Sama dengan Bisnis Anda",
+                contact_desc: "Silakan tinggalkan pesan atau konsultasikan kebutuhan pasokan komoditas rempah usaha Anda melalui form inquiry atau langsung chat via WhatsApp.",
+                addr_title: "Alamat Kantor Utama",
+                email_title: "Email Resmi",
+                phone_title: "WhatsApp / Direct Call",
+                wa_card_title: "Respon Cepat via WhatsApp",
+                wa_card_desc: "Konsultasikan spesifikasi & sampel rempah langsung dengan tim sales kami.",
+                wa_card_btn: "Chat Sekarang",
+                form_heading: "Kirim Inquiry Pesanan",
+                form_name_label: "Nama Lengkap / Perusahaan",
+                form_email_label: "Email",
+                form_msg_label: "Pesan / Kebutuhan Rempah",
+                form_btn: "Kirim Pesan Sekarang",
+                footer_desc: "Pemasok terpercaya komoditas rempah murni Nusantara dengan jaminan kualitas terbaik untuk pasar lokal maupun mancanegara.",
+                footer_nav_title: "Navigasi Cepat",
+                footer_social_title: "Media Sosial Kami",
+                footer_social_desc: "Ikuti saluran resmi kami untuk update stok dan berita ekspor:"
+            },
+            en: {
+                nav_about: "Company Profile",
+                nav_dashboard: "Operational Dashboard",
+                nav_calculator: "Cost Estimator",
+                nav_products: "Spice Catalogue",
+                nav_advantages: "Our Advantages",
+                nav_contact: "Contact Us",
+                btn_whatsapp: "WhatsApp",
+                hero_badge: "Premier Indonesian Pure Spice Exporter & Supplier",
+                hero_title: "Authentic Indonesian Spice Heritage for Global Markets",
+                hero_desc: "CakraBuanaJayantara supplies premium export-grade Indonesian spices harvested directly from fertile plantations under international quality standards.",
+                hero_btn_catalog: "Explore Spice Catalogue",
+                hero_btn_wa: "Direct WhatsApp Chat",
+                stat_1: "Natural & Chemical-Free",
+                stat_2: "Export Destination Countries",
+                stat_3: "Supply Capacity / Year",
+                about_subtitle: "CakraBuanaJayantara Profile",
+                about_title: "Bringing Traditional Spice Excellence to Global Industries",
+                about_p1: "PT CakraBuanaJayantara is a leading spice supplier and exporter dedicated to presenting Indonesia's finest harvests to international and domestic industrial markets.",
+                about_p2: "Combining local wisdom, direct farming networks, and modern quality control, we ensure consistent high quality, optimal moisture content, and punctual delivery.",
+                about_badge: "International Standard Quality Assurance",
+                about_vision_title: "Our Vision",
+                about_vision_desc: "To be the premier trusted, globally competitive, and sustainable Indonesian spice exporter.",
+                about_mission_title: "Our Mission",
+                about_mission_desc: "Empowering local farmers and supplying export-grade hygienic pure spices.",
+                about_feature1_title: "Organic & Pure",
+                about_feature1_desc: "Free from preservatives and additives",
+                about_feature2_title: "Sustainable Partnership",
+                about_feature2_desc: "Supporting the livelihoods of local farmers",
+                dash_subtitle: "Dashboard Operational Overview",
+                dash_title: "Operational Summary & Capacity",
+                dash_desc: "Real-time overview of warehouse scale, export metrics, and quality certification standard.",
+                dash_stat1_title: "Total Warehouse Capacity",
+                dash_stat1_sub: "+15% this month",
+                dash_stat2_title: "Active Shipments",
+                dash_stat2_sub: "In transit",
+                dash_stat3_title: "Registered Farmers",
+                dash_stat3_sub: "Java, Maluku, Sumatra",
+                dash_stat4_title: "Quality Certifications",
+                dash_stat4_sub: "100% Verified",
+                calc_subtitle: "Quick Estimator",
+                calc_title: "Bulk Spice Order & Price Calculator",
+                calc_desc: "Select a commodity, quantity, and currency to calculate instant estimated wholesale pricing.",
+                calc_lbl_spice: "Select Spice",
+                calc_lbl_qty: "Quantity (kg)",
+                calc_lbl_curr: "Currency",
+                calc_total_label: "Estimated Total Cost",
+                calc_note: "*Estimated FOB pricing, excludes ocean/air freight delivery fees.",
+                calc_btn_wa: "Request Formal Quote",
+                prod_subtitle: "Commodity Catalogue",
+                prod_title: "Featured Premium Spices",
+                prod_desc: "High-grade natural spices ready to fulfill manufacturing, culinary, and pharmaceutical requirements.",
+                filter_all: "All Spices",
+                filter_seeds: "Seeds & Grains",
+                filter_bark: "Bark & Flower",
+                filter_roots: "Roots & Rhizomes",
+                moq: "Min. Order",
+                btn_specs: "Detailed Specifications",
+                p1_name: "Dried Cloves",
+                p1_desc: "Distinct sharp aroma with high essential oil content, sourced from top plantations in Maluku & Java.",
+                p2_name: "Black Pepper",
+                p2_desc: "Whole Lampung Black Pepper with intense pungency, dry-cured for long shelf life.",
+                p3_name: "Cinnamon",
+                p3_desc: "Kerinci Cinnamon with sweet aromatic flavor. Available in cut roll sticks and fine powder.",
+                p4_name: "Nutmeg & Mace",
+                p4_desc: "High quality shelled whole nutmeg from Banda & Sulawesi. Perfect choice for extraction industries.",
+                p5_name: "Turmeric Slices",
+                p5_desc: "Naturally sun-dried sliced turmeric with rich curcumin hue, ideal for herbal & health supplements.",
+                p6_name: "Dried Ginger",
+                p6_desc: "Selected ginger with rich warming aroma, processed under strictly controlled moisture levels.",
+                adv_subtitle: "Why Choose Us",
+                adv_title: "CakraBuanaJayantara Advantages",
+                adv_desc: "Our commitment to delivering excellence for every global business partner.",
+                adv1_title: "Strict Quality Control",
+                adv1_desc: "Every commodity undergoes manual sorting and rigorous moisture testing prior to final packaging.",
+                adv2_title: "Safe & Fast Logistics",
+                adv2_desc: "Comprehensive sea and land freight support with vacuum-sealed scratch-resistant packaging.",
+                adv3_title: "Direct-Farmer Competitive Pricing",
+                adv3_desc: "Direct partnerships with farmers eliminate redundant intermediaries to secure competitive market pricing.",
+                contact_subtitle: "Contact CakraBuanaJayantara",
+                contact_title: "Ready to Partner with Your Business",
+                contact_desc: "Leave a message or discuss your bulk spice supply requirements via inquiry form or instant WhatsApp chat.",
+                addr_title: "Headquarters Address",
+                email_title: "Official Email",
+                phone_title: "WhatsApp / Direct Call",
+                wa_card_title: "Fast Response via WhatsApp",
+                wa_card_desc: "Consult product specifications & request spice samples directly with our sales team.",
+                wa_card_btn: "Chat Now",
+                form_heading: "Submit Order Inquiry",
+                form_name_label: "Full Name / Company",
+                form_email_label: "Email Address",
+                form_msg_label: "Message / Spice Requirements",
+                form_btn: "Send Inquiry Now",
+                footer_desc: "Trusted exporter & supplier of authentic Indonesian spices with guaranteed top quality for global and local markets.",
+                footer_nav_title: "Quick Navigation",
+                footer_social_title: "Follow Our Socials",
+                footer_social_desc: "Stay updated with our latest stock updates and export news:"
+            },
+            zh: {
+                nav_about: "公司简介",
+                nav_dashboard: "运营仪表板",
+                nav_calculator: "费用计算器",
+                nav_products: "香料目录",
+                nav_advantages: "我们的优势",
+                nav_contact: "联系我们",
+                btn_whatsapp: "WhatsApp",
+                hero_badge: "印度尼西亚首屈一指的纯正香料出口商",
+                hero_title: "面向全球市场的纯正印尼香料遗产",
+                hero_desc: "CakraBuanaJayantara 供货顶级出口级印尼香料，直接采自印尼肥沃庄园，符合国际质量标准。",
+                hero_btn_catalog: "浏览香料目录",
+                hero_btn_wa: "WhatsApp 直接咨询",
+                stat_1: "天然无化学添加",
+                stat_2: "出口目标国家",
+                stat_3: "年供应能力",
+                about_subtitle: "CakraBuanaJayantara 简介",
+                about_title: "将传统优质香料带入全球工业领域",
+                about_p1: "PT CakraBuanaJayantara 是一家领先的香料供应商和出口商，致力于向国内外工业市场展示印尼最优质的农产品。",
+                about_p2: "结合本土智慧、直接农户网络以及现代品控，我们确保质量稳定、水分适宜和准时交货。",
+                about_badge: "国际标准质量保证",
+                about_vision_title: "我们的愿景",
+                about_vision_desc: "成为受人信赖、具备全球竞争力且可持续发展的印尼香料出口支柱。",
+                about_mission_title: "我们的使命",
+                about_mission_desc: "赋能当地农户，提供出口级卫生纯正香料。",
+                about_feature1_title: "有机纯正",
+                about_feature1_desc: "无防腐剂和添加剂",
+                about_feature2_title: "可持续伙伴关系",
+                about_feature2_desc: "支持当地农户提高生活水平",
+                dash_subtitle: "运营仪表板",
+                dash_title: "运营与产能概况",
+                dash_desc: "仓库规模、出口数据及质量认证保证的实时概况。",
+                dash_stat1_title: "总仓库容量",
+                dash_stat1_sub: "本月增长 15%",
+                dash_stat2_title: "活跃运输",
+                dash_stat2_sub: "海运途中",
+                dash_stat3_title: "合作农户",
+                dash_stat3_sub: "爪哇、马鲁古、苏门答腊",
+                dash_stat4_title: "质量认证",
+                dash_stat4_sub: "100% 已验证",
+                calc_subtitle: "快速估算器",
+                calc_title: "香料采购费用计算",
+                calc_desc: "选择品类、数量和货币，快速估算批发采购总价。",
+                calc_lbl_spice: "选择香料",
+                calc_lbl_qty: "数量 (公斤)",
+                calc_lbl_curr: "结算货币",
+                calc_total_label: "预计总费用",
+                calc_note: "*估计离岸价 (FOB)，不含国际运费。",
+                calc_btn_wa: "获取正式报价",
+                prod_subtitle: "商品目录",
+                prod_title: "特色优质香料",
+                prod_desc: "高品质天然香料，随时满足食品加工、餐饮及制药行业需求。",
+                filter_all: "所有香料",
+                filter_seeds: "种子与颗粒",
+                filter_bark: "树皮与花蕾",
+                filter_roots: "根茎类",
+                moq: "起订量",
+                btn_specs: "详细规格",
+                p1_name: "干丁香 (Cloves)",
+                p1_desc: "具有浓郁的独特香气，精油含量高，采自马鲁古和爪哇最佳庄园。",
+                p2_name: "黑胡椒 (Black Pepper)",
+                p2_desc: "整颗楠榜黑胡椒，辣味浓烈，完美干燥，保质期长。",
+                p3_name: "肉桂 (Cinnamon)",
+                p3_desc: "科林奇肉桂，香气甘甜，提供卷棒及细粉形式。",
+                p4_name: "肉豆蔻与豆蔻花 (Nutmeg)",
+                p4_desc: "来自班达和苏拉威西的高品质无壳肉豆蔻，提取工业的理想选择。",
+                p5_name: "干黄姜片 (Turmeric)",
+                p5_desc: "自然晒干切片黄姜，姜黄素含量高，非常适合保健品与草药。",
+                p6_name: "干姜 (Dried Ginger)",
+                p6_desc: "精选生姜，香气浓郁温暖，水分受控处理，防止发霉。",
+                adv_subtitle: "为什么选择我们",
+                adv_title: "CakraBuanaJayantara 核心优势",
+                adv_desc: "我们致力于为全球每个合作伙伴提供最高标准的合作体验。",
+                adv1_title: "严格的质量控制",
+                adv1_desc: "所有商品在最终包装前均经过人工分选和严格的水分测试。",
+                adv2_title: "安全快捷的物流",
+                adv2_desc: "全面的陆运和海运支持，配有防刮真空包装，确保国内外安全运输。",
+                adv3_title: "农户直供竞争价格",
+                adv3_desc: "直接与农户合作，减少中间环节，确保最具竞争力的供货价格。",
+                contact_subtitle: "联系 CakraBuanaJayantara",
+                contact_title: "期待与您的企业携手合作",
+                contact_desc: "请随时留言或通过询价表单、WhatsApp 直接沟通您的批量香料需求。",
+                addr_title: "总部地址",
+                email_title: "官方邮箱",
+                phone_title: "WhatsApp / 电话",
+                wa_card_title: "WhatsApp 快速响应",
+                wa_card_desc: "直接与我们的销售团队讨论产品规格并索取样品。",
+                wa_card_btn: "立即沟通",
+                form_heading: "提交采购询价",
+                form_name_label: "姓名 / 公司名称",
+                form_email_label: "电子邮箱",
+                form_msg_label: "留言 / 香料需求",
+                form_btn: "立即发送询价",
+                footer_desc: "印尼纯正香料的可靠出口商与供应商，为全球和本地市场提供顶尖质量保障。",
+                footer_nav_title: "快速导航",
+                footer_social_title: "关注我们",
+                footer_social_desc: "关注我们的官方渠道，获取最新的库存动态和出口资讯："
+            },
+            es: {
+                nav_about: "Perfil de la Empresa",
+                nav_dashboard: "Panel Operativo",
+                nav_calculator: "Calculadora de Costos",
+                nav_products: "Catálogo de Especias",
+                nav_advantages: "Ventajas",
+                nav_contact: "Contacto",
+                btn_whatsapp: "WhatsApp",
+                hero_badge: "Exportador y Proveedor Premier de Especias de Indonesia",
+                hero_title: "Herencia Auténtica de Especias Indonesias para el Mercado Global",
+                hero_desc: "CakraBuanaJayantara suministra especias puras de grado de exportación cosechadas de fértiles plantaciones bajo estándares internacionales.",
+                hero_btn_catalog: "Ver Catálogo de Especias",
+                hero_btn_wa: "Chat Directo por WhatsApp",
+                stat_1: "Natural y Sin Químicos",
+                stat_2: "Países de Exportación",
+                stat_3: "Capacidad / Año",
+                about_subtitle: "Perfil de CakraBuanaJayantara",
+                about_title: "Llevando la Excelencia de las Especias a las Industrias Globales",
+                about_p1: "PT CakraBuanaJayantara es un proveedor y exportador líder dedicado a presentar las mejores cosechas de Indonesia al mercado internacional y doméstico.",
+                about_p2: "Combinando sabiduría local, red directa de agricultores y control de calidad moderno, garantizamos una calidad constante y entregas a tiempo.",
+                about_badge: "Garantía de Calidad con Estándar Internacional",
+                about_vision_title: "Nuestra Visión",
+                about_vision_desc: "Ser el exportador de especias indonesias más confiable, competitivo e interconectado.",
+                about_mission_title: "Nuestra Misión",
+                about_mission_desc: "Empoderar a los agricultores locales y ofrecer especias higiénicas de calidad de exportación.",
+                about_feature1_title: "Orgánico y Puro",
+                about_feature1_desc: "Sin conservantes ni aditivos",
+                about_feature2_title: "Alianza Sostenible",
+                about_feature2_desc: "Apoyando el bienestar de los agricultores locales",
+                dash_subtitle: "Panel de Operaciones",
+                dash_title: "Resumen Operativo y Capacidad",
+                dash_desc: "Resumen en tiempo real de la capacidad del almacén, envíos y certificaciones de calidad.",
+                dash_stat1_title: "Capacidad Total del Almacén",
+                dash_stat1_sub: "+15% este mes",
+                dash_stat2_title: "Envíos Activos",
+                dash_stat2_sub: "En tránsito marítimo",
+                dash_stat3_title: "Agricultores Asociados",
+                dash_stat3_sub: "Java, Molucas, Sumatra",
+                dash_stat4_title: "Certificación de Calidad",
+                dash_stat4_sub: "100% Verificado",
+                calc_subtitle: "Calculadora Rápida",
+                calc_title: "Calculadora de Pedidos y Precios",
+                calc_desc: "Seleccione producto, cantidad y moneda para estimar costos de venta al por mayor al instante.",
+                calc_lbl_spice: "Seleccionar Especia",
+                calc_lbl_qty: "Cantidad (kg)",
+                calc_lbl_curr: "Moneda",
+                calc_total_label: "Costo Total Estimado",
+                calc_note: "*Precio FOB estimado, excluye gastos de envío marítimo/aéreo.",
+                calc_btn_wa: "Solicitar Cotización Oficial",
+                prod_subtitle: "Catálogo de Productos",
+                prod_title: "Especias Destacadas",
+                prod_desc: "Especias naturales de alta calidad listas para la industria alimentaria, gastronómica y farmacéutica.",
+                filter_all: "Todas las Especias",
+                filter_seeds: "Semillas y Granos",
+                filter_bark: "Corteza y Flores",
+                filter_roots: "Raíces y Rizomas",
+                moq: "Pedido Mín.",
+                btn_specs: "Especificaciones",
+                p1_name: "Clavo de Olor Seco",
+                p1_desc: "Aroma intenso característico y alto contenido de aceite esencial, cosechado en Maluku y Java.",
+                p2_name: "Pimienta Negra",
+                p2_desc: "Pimienta negra entera de Lampung con picor intenso, secada para una larga conservación.",
+                p3_name: "Canela (Cinnamon)",
+                p3_desc: "Canela Kerinci con aroma dulce. Disponible en rama enrollada y en polvo fino.",
+                p4_name: "Nuez Moscada y Macis",
+                p4_desc: "Nuez moscada entera sin cáscara de Banda y Célebes. Ideal para la industria de extracción.",
+                p5_name: "Cúrcuma Seca (Rodajas)",
+                p5_desc: "Cúrcuma deshidratada naturalmente con alto contenido de curcumina, ideal para suplementos.",
+                p6_name: "Jengibre Seco",
+                p6_desc: "Jengibre seleccionado con cálido aroma, procesado bajo control de humedad estricto.",
+                adv_subtitle: "Por Qué Elegirnos",
+                adv_title: "Ventajas de CakraBuanaJayantara",
+                adv_desc: "Nuestro compromiso de ofrecer los mejores estándares de servicio a nuestros socios comerciales.",
+                adv1_title: "Control de Calidad Estricto",
+                adv1_desc: "Cada producto pasa por selección manual y prueba de humedad antes del empaque final.",
+                adv2_title: "Logística Segura y Rápida",
+                adv2_desc: "Soporte de transporte marítimo y terrestre con empaque al vacío resistente.",
+                adv3_title: "Precios Competitivos Directos del Agricultor",
+                adv3_desc: "Alianza directa con agricultores sin intermediarios para asegurar los mejores precios del mercado.",
+                contact_subtitle: "Contacte con CakraBuanaJayantara",
+                contact_title: "Listos para Colaborar con su Empresa",
+                contact_desc: "Envíenos un mensaje o consulte sus necesidades de especias al por mayor mediante nuestro formulario o chat de WhatsApp.",
+                addr_title: "Dirección de la Sede",
+                email_title: "Correo Oficial",
+                phone_title: "WhatsApp / Teléfono Directo",
+                wa_card_title: "Respuesta Rápida por WhatsApp",
+                wa_card_desc: "Consulte especificaciones y solicite muestras directamente con nuestro equipo de ventas.",
+                wa_card_btn: "Chatear Ahora",
+                form_heading: "Enviar Solicitud de Pedido",
+                form_name_label: "Nombre Completo / Empresa",
+                form_email_label: "Correo Electrónico",
+                form_msg_label: "Mensaje / Requerimiento de Especias",
+                form_btn: "Enviar Solicitud",
+                footer_desc: "Proveedor y exportador confiable de especias indonesias auténticas de la más alta calidad para el mercado global.",
+                footer_nav_title: "Navegación Rápida",
+                footer_social_title: "Síganos en Redes",
+                footer_social_desc: "Manténgase al día con nuestras noticias de exportación y stock:"
+            },
+            de: {
+                nav_about: "Unternehmensprofil",
+                nav_dashboard: "Operatives Dashboard",
+                nav_calculator: "Kostenrechner",
+                nav_products: "Gewürzkatalog",
+                nav_advantages: "Vorteile",
+                nav_contact: "Kontakt",
+                btn_whatsapp: "WhatsApp",
+                hero_badge: "Führender indonesischer Reingewürz-Exporteur",
+                hero_title: "Authentisches indonesisches Gewürzerbe für den Weltmarkt",
+                hero_desc: "CakraBuanaJayantara liefert erstklassige indonesische Gewürze in Exportqualität direkt von fruchtbaren Plantagen nach internationalen Standards.",
+                hero_btn_catalog: "Gewürzkatalog Durchsuchen",
+                hero_btn_wa: "Direkt-Chat per WhatsApp",
+                stat_1: "Natürlich & Chemiefrei",
+                stat_2: "Exportzielländer",
+                stat_3: "Lieferkapazität / Jahr",
+                about_subtitle: "Profil von CakraBuanaJayantara",
+                about_title: "Traditionelle Gewürze für die globale Industrie",
+                about_p1: "PT CakraBuanaJayantara ist ein führender Gewürzlieferant und Exporteur, der die besten Ernten Indonesiens auf internationalen Märkten präsentiert.",
+                about_p2: "Durch die Kombination aus lokaler Erfahrung, direktem Bauernnetzwerk und moderner Qualitätskontrolle garantieren wir pünktliche Lieferungen und höchste Qualität.",
+                about_badge: "Garantierte Qualität nach internationalem Standard",
+                about_vision_title: "Unsere Vision",
+                about_vision_desc: "Der verlässliche und nachhaltige Hauptpfeiler des indonesischen Gewürzexports weltweit zu sein.",
+                about_mission_title: "Unsere Mission",
+                about_mission_desc: "Lokale Landwirte zu stärken und hygienisch einwandfreie Gewürze in Exportqualität zu liefern.",
+                about_feature1_title: "Organisch & Rein",
+                about_feature1_desc: "Frei von Konservierungsstoffen und Zusatzstoffen",
+                about_feature2_title: "Nachhaltige Partnerschaft",
+                about_feature2_desc: "Unterstützung des Lebensstandards lokaler Bauern",
+                dash_subtitle: "Operatives Dashboard",
+                dash_title: "Betriebs- & Kapazitätsübersicht",
+                dash_desc: "Echtzeit-Überblick über Lagerkapazität, Exportmetriken und Qualitätszertifikate.",
+                dash_stat1_title: "Gesamte Lagerkapazität",
+                dash_stat1_sub: "+15% diesen Monat",
+                dash_stat2_title: "Aktive Lieferungen",
+                dash_stat2_sub: "Auf Seefrachtweg",
+                dash_stat3_title: "Partner-Landwirte",
+                dash_stat3_sub: "Java, Molukken, Sumatra",
+                dash_stat4_title: "Qualitätszertifikat",
+                dash_stat4_sub: "100% Verifiziert",
+                calc_subtitle: "Schnellrechner",
+                calc_title: "Gewürzbestell- & Preisrechner",
+                calc_desc: "Wählen Sie Produkt, Menge und Währung für eine sofortige Großhandelspreisschätzung.",
+                calc_lbl_spice: "Gewürz Wählen",
+                calc_lbl_qty: "Menge (kg)",
+                calc_lbl_curr: "Währung",
+                calc_total_label: "Geschätzte Gesamtkosten",
+                calc_note: "*Geschätzter FOB-Preis, ohne See-/Luftfrachtkosten.",
+                calc_btn_wa: "Offizielles Angebot Anfordern",
+                prod_subtitle: "Produktkatalog",
+                prod_title: "Ausgewählte Gewürze",
+                prod_desc: "Hochwertige Naturgewürze für die Lebensmittel-, Gastronomie- und Pharmaindustrie.",
+                filter_all: "Alle Gewürze",
+                filter_seeds: "Samen & Körner",
+                filter_bark: "Rinde & Blüten",
+                filter_roots: "Wurzeln & Rhizome",
+                moq: "Mindestbestellmenge",
+                btn_specs: "Spezifikationen",
+                p1_name: "Getrocknete Nelken (Cloves)",
+                p1_desc: "Intensives Aroma mit hohem ätherischen Ölgehalt von den besten Plantagen in Maluku & Java.",
+                p2_name: "Schwarzer Pfeffer",
+                p2_desc: "Ganzer schwarzer Lampung-Pfeffer mit intensiver Schärfe, perfekt getrocknet für lange Haltbarkeit.",
+                p3_name: "Zimt (Cinnamon)",
+                p3_desc: "Kerinci-Zimt mit süß-aromatischem Duft. Erhältlich als Stangenrolle oder feines Pulver.",
+                p4_name: "Muskatnuss & Muskatblüte",
+                p4_desc: "Hochwertige geschälte Muskatnüsse aus Banda & Sulawesi. Perfekt für die Extraktionsindustrie.",
+                p5_name: "Getrockneter Kurkuma",
+                p5_desc: "Natürlich sonnengetrocknete Kurkumascheiben mit hohem Curcumin-Gehalt.",
+                p6_name: "Getrockneter Ingwer",
+                p6_desc: "Ausgewählter Ingwer mit wärmendem Aroma, verarbeitet unter kontrollierter Feuchtigkeit.",
+                adv_subtitle: "Warum Uns Wählen",
+                adv_title: "Vorteile von CakraBuanaJayantara",
+                adv_desc: "Unser Engagement für die besten Servicestandards für jeden Geschäftspartner.",
+                adv1_title: "Strenge Qualitätskontrolle",
+                adv1_desc: "Jedes Produkt durchläuft eine manuelle Sortierung und Feuchtigkeitsprüfung vor der Verpackung.",
+                adv2_title: "Sichere & Schnelle Logistik",
+                adv2_desc: "See- und Landfracht mit vakuumversiegelter Verpackung für den weltweiten Versand.",
+                adv3_title: "Direktpreise vom Bauern",
+                adv3_desc: "Direkte Partnerschaften mit Landwirten ohne Zwischenhändler garantieren beste Marktpreise.",
+                contact_subtitle: "Kontaktieren Sie CakraBuanaJayantara",
+                contact_title: "Bereit für die Zusammenarbeit mit Ihrem Unternehmen",
+                contact_desc: "Senden Sie uns eine Nachricht oder besprechen Sie Ihren Großhandelsbedarf per Formular oder WhatsApp.",
+                addr_title: "Hauptsitz Adresse",
+                email_title: "Offizielle E-Mail",
+                phone_title: "WhatsApp / Direktruf",
+                wa_card_title: "Schnelle Antwort per WhatsApp",
+                wa_card_desc: "Besprechen Sie Produktspezifikationen & Muster direkt mit unserem Vertriebsteam.",
+                wa_card_btn: "Jetzt Chatten",
+                form_heading: "Anfrage Senden",
+                form_name_label: "Name / Firma",
+                form_email_label: "E-Mail-Adresse",
+                form_msg_label: "Nachrichten / Gewürzbedarf",
+                form_btn: "Anfrage Jetzt Absenden",
+                footer_desc: "Ihr zuverlässiger Partner für authentische indonesische Gewürze in absoluter Spitzenqualität.",
+                footer_nav_title: "Schnellnavigation",
+                footer_social_title: "Folgen Sie Uns",
+                footer_social_desc: "Bleiben Sie informiert über unsere aktuellen Bestände und Exportnews:"
+            }
+        };
+
+        // Switch Language Function
+        function setLanguage(lang) {
+            const dict = translations[lang] || translations['id'];
+            
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (dict[key]) {
+                    element.innerHTML = dict[key];
+                }
+            });
+
+            // Update html lang attribute
+            document.documentElement.lang = lang;
+        }
+
+        // Event listener for language select dropdown
+        document.getElementById('langSelect').addEventListener('change', (e) => {
+            setLanguage(e.target.value);
+        });
+
+        // Mobile Menu Toggle logic
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const menuIcon = document.getElementById('menuIcon');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            if (mobileMenu.classList.contains('hidden')) {
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            } else {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-xmark');
+            }
+        });
+
+        document.querySelectorAll('#mobileMenu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            });
+        });
+
+        // --- Interactive Search Bar Logic ---
+        function filterProducts() {
+            const query = document.getElementById('searchInput').value.toLowerCase();
+            const cards = document.querySelectorAll('.product-card');
+
+            cards.forEach(card => {
+                const title = card.querySelector('.product-title').textContent.toLowerCase();
+                const desc = card.querySelector('.product-desc').textContent.toLowerCase();
+                if (title.includes(query) || desc.includes(query)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Product Category Filter Logic
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const productCards = document.querySelectorAll('.product-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => {
+                    b.classList.remove('active', 'bg-brand-500', 'text-white');
+                    b.classList.add('bg-white', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-300');
+                });
+                btn.classList.add('active', 'bg-brand-500', 'text-white');
+                btn.classList.remove('bg-white', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-300');
+
+                const filter = btn.getAttribute('data-filter');
+
+                productCards.forEach(card => {
+                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Modal Logic
+        const modal = document.getElementById('productModal');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalBody = document.getElementById('modalBody');
+        let activeModalProduct = "";
+
+        const specsData = {
+            'Bunga Cengkeh (Clove Flower)': `
+                <div class="space-y-2">
+                    <p class="flex justify-between border-b dark:border-slate-700 pb-1"><strong>Grade:</strong> <span>Grade A</span></p>
+                    <p class="flex justify-between border-b dark:border-slate-700 pb-1"><strong>Moisture Content:</strong> <span>Max 12%</span></p>
+                    <p class="flex justify-between border-b dark:border-slate-700 pb-1"><strong>Form:</strong> <span>Fresh clove flower</span></p>
+                    <p class="flex justify-between border-b dark:border-slate-700 pb-1"><strong>Packaging:</strong> <span>PP Bag 25 kg</span></p>
+                    <p class="flex justify-between border-b dark:border-slate-700 pb-1"><strong>Origin:</strong> <span>Maluku & East Java, Indonesia</span></p>
+                </div>
+            `,
+            'Cengkeh (Dried Cloves)': `
+                <div class="space-y-2">
+                    <p class="flex justify-between border-b dark:border-slate-700 pb-1"><strong>Moisture Content:</strong> <span>Max 12%</span></p>
+                    <p class="flex justify-between border-b dark:border-slate-700 pb-1"><strong>Essential Oil:</strong> <span>> 18%</span></p>
+                    <p class="flex justify-between border-b dark:border-slate-700 pb-1"><strong>Grade:</strong> <span>Lalpari / Export Grade A Super</span></p>
+                    <p class="flex justify-between border-b dark:border-slate-700 pb-1"><strong>Packaging:</strong> <span>PP Bag 25 kg / Vacuum Bag</span></p>
+                    <p class="flex justify-between border-b dark:border-slate-700 pb-1"><strong>Origin:</strong> <span>Maluku & East Java, Indonesia</span></p>
+                </div>
+            `,
+            'Jahe Kering (Dried Ginger)': `
+                <div class="space-y-2">
+                    <p class="flex justify-between border-b dark:border-slate-700 pb-1"><strong>Variety:</strong> <span>Elephant / Small Ginger</span></p>
+                    <p class="flex justify-between border-b dark:border-slate-700 pb-1"><strong>Moisture Content:</strong> <span>Max 11%</span></p>
+                    <p class="flex justify-between border-b dark:border-slate-700 pb-1"><strong>Form:</strong> <span>Sliced Dried</span></p>
+                    <p class="flex justify-between border-b dark:border-slate-700 pb-1"><strong>Packaging:</strong> <span>Bag 25 kg / 50 kg</span></p>
+                    <p class="flex justify-between border-b dark:border-slate-700 pb-1"><strong>Origin:</strong> <span>Java, Indonesia</span></p>
+                </div>
+            `,
+            'Jahe Segar (Fresh Ginger)': `
+                <div class="space-y-2">
+                    <p class="flex justify-between border-b dark:border-slate-700 pb-1"><strong>Form:</strong> <span>Fresh rhizome</span></p>
+                    <p class="flex justify-between border-b dark:border-slate-700 pb-1"><strong>Moisture Content:</strong> <span>Natural (approx. 80-85%)</span></p>
+                    <p class="flex justify-between border-b dark:border-slate-700 pb-1"><strong>Grade:</strong> <span>Selected Fresh</span></p>
+                    <p class="flex justify-between border-b dark:border-slate-700 pb-1"><strong>Packaging:</strong> <span>Jute / PP Bag 25 kg</span></p>
+                    <p class="flex justify-between border-b dark:border-slate-700 pb-1"><strong>Origin:</strong> <span>Java, Indonesia</span></p>
+                </div>
+            `,
+            'Kayu Manis (Cinnamon Stick)': `
+                <div class="space-y-2">
+                    <p class="flex justify-between border-b dark:border-slate-700 pb-1"><strong>Variety:</strong> <span>Cinnamomum Burmannii (Kerinci)</span></p>
+                    <p class="flex justify-between border-b dark:border-slate-700 pb-1"><strong>Moisture Content:</strong> <span>Max 14%</span></p>
+                    <p class="flex justify-between border-b dark:border-slate-700 pb-1"><strong>Form:</strong> <span>Cut Roll Stick</span></p>
+                    <p class="flex justify-between border-b dark:border-slate-700 pb-1"><strong>Packaging:</strong> <span>Carton Box 25 kg / Custom</span></p>
+                    <p class="flex justify-between border-b dark:border-slate-700 pb-1"><strong>Origin:</strong> <span>Kerinci, Jambi, Indonesia</span></p>
+                </div>
+            `,
+            'Kunyit Kering (Dried Turmeric)': `
+                <div class="space-y-2">
+                    <p class="flex justify-between border-b dark:border-slate-700 pb-1"><strong>Curcumin Content:</strong> <span>~4-6%</span></p>
+                    <p class="flex justify-between border-b dark:border-slate-700 pb-1"><strong>Moisture Content:</strong> <span>Max 10%</span></p>
+                    <p class="flex justify-between border-b dark:border-slate-700 pb-1"><strong>Drying Method:</strong> <span>Hygienic solar dryer</span></p>
+                    <p class="flex justify-between border-b dark:border-slate-700 pb-1"><strong>Packaging:</strong> <span>Gunny / PP Bag 50 kg</span></p>
+                    <p class="flex justify-between border-b dark:border-slate-700 pb-1"><strong>Origin:</strong> <span>Java, Indonesia</span></p>
+                </div>
+            `,
+            'Kunyit Segar (Fresh Turmeric)': `
+                <div class="space-y-2">
+                    <p class="flex justify-between border-b dark:border-slate-700 pb-1"><strong>Form:</strong> <span>Fresh rhizome</span></p>
+                    <p class="flex justify-between border-b dark:border-slate-700 pb-1"><strong>Curcumin Content:</strong> <span>~3-5%</span></p>
+                    <p class="flex justify-between border-b dark:border-slate-700 pb-1"><strong>Grade:</strong> <span>Selected Fresh</span></p>
+                    <p class="flex justify-between border-b dark:border-slate-700 pb-1"><strong>Packaging:</strong> <span>Jute / PP Bag 25 kg</span></p>
+                    <p class="flex justify-between border-b dark:border-slate-700 pb-1"><strong>Origin:</strong> <span>Java, Indonesia</span></p>
+                </div>
+            `,
+            'Lengkuas Segar (Fresh Galangal)': `
+                <div class="space-y-2">
+                    <p class="flex justify-between border-b dark:border-slate-700 pb-1"><strong>Form:</strong> <span>Fresh rhizome</span></p>
+                    <p class="flex justify-between border-b dark:border-slate-700 pb-1"><strong>Aroma:</strong> <span>Strong characteristic</span></p>
+                    <p class="flex justify-between border-b dark:border-slate-700 pb-1"><strong>Grade:</strong> <span>Selected Fresh</span></p>
+                    <p class="flex justify-between border-b dark:border-slate-700 pb-1"><strong>Packaging:</strong> <span>Jute / PP Bag 25 kg</span></p>
+                    <p class="flex justify-between border-b dark:border-slate-700 pb-1"><strong>Origin:</strong> <span>Java, Indonesia</span></p>
+                </div>
+            `,
+            'Pala (Nutmeg)': `
+                <div class="space-y-2">
+                    <p class="flex justify-between border-b dark:border-slate-700 pb-1"><strong>Grade:</strong> <span>ABCD (Sound Nutmeg)</span></p>
+                    <p class="flex justify-between border-b dark:border-slate-700 pb-1"><strong>Moisture Content:</strong> <span>Max 10%</span></p>
+                    <p class="flex justify-between border-b dark:border-slate-700 pb-1"><strong>Aflatoxin Free:</strong> <span>Lab Certified</span></p>
+                    <p class="flex justify-between border-b dark:border-slate-700 pb-1"><strong>Packaging:</strong> <span>Airtight Vacuum Bag 25 kg</span></p>
+                    <p class="flex justify-between border-b dark:border-slate-700 pb-1"><strong>Origin:</strong> <span>Banda & Sulawesi, Indonesia</span></p>
+                </div>
+            `,
+            'Sereh Kering (Dried Lemongrass)': `
+                <div class="space-y-2">
+                    <p class="flex justify-between border-b dark:border-slate-700 pb-1"><strong>Form:</strong> <span>Dried cut stalks</span></p>
+                    <p class="flex justify-between border-b dark:border-slate-700 pb-1"><strong>Moisture Content:</strong> <span>Max 12%</span></p>
+                    <p class="flex justify-between border-b dark:border-slate-700 pb-1"><strong>Aroma:</strong> <span>Citral / lemony</span></p>
+                    <p class="flex justify-between border-b dark:border-slate-700 pb-1"><strong>Packaging:</strong> <span>PP Bag 25 kg</span></p>
+                    <p class="flex justify-between border-b dark:border-slate-700 pb-1"><strong>Origin:</strong> <span>Java, Indonesia</span></p>
+                </div>
+            `,
+            'Kemiri (Candlenut)': `
+                <div class="space-y-2">
+                    <p class="flex justify-between border-b dark:border-slate-700 pb-1"><strong>Form:</strong> <span>Whole dried candlenut</span></p>
+                    <p class="flex justify-between border-b dark:border-slate-700 pb-1"><strong>Moisture Content:</strong> <span>Max 8%</span></p>
+                    <p class="flex justify-between border-b dark:border-slate-700 pb-1"><strong>Grade:</strong> <span>Selected</span></p>
+                    <p class="flex justify-between border-b dark:border-slate-700 pb-1"><strong>Packaging:</strong> <span>Vacuum Bag 25 kg</span></p>
+                    <p class="flex justify-between border-b dark:border-slate-700 pb-1"><strong>Origin:</strong> <span>Sulawesi, Indonesia</span></p>
+                </div>
+            `,
+            'Bunga Lawang (Star Anise)': `
+                <div class="space-y-2">
+                    <p class="flex justify-between border-b dark:border-slate-700 pb-1"><strong>Form:</strong> <span>Whole dried star anise</span></p>
+                    <p class="flex justify-between border-b dark:border-slate-700 pb-1"><strong>Moisture Content:</strong> <span>Max 13%</span></p>
+                    <p class="flex justify-between border-b dark:border-slate-700 pb-1"><strong>Grade:</strong> <span>Export Grade</span></p>
+                    <p class="flex justify-between border-b dark:border-slate-700 pb-1"><strong>Packaging:</strong> <span>Carton / PP Bag 25 kg</span></p>
+                    <p class="flex justify-between border-b dark:border-slate-700 pb-1"><strong>Origin:</strong> <span>Indonesia</span></p>
+                </div>
+            `,
+            'Kayu Manis Bubuk (Cinnamon Powder)': `
+                <div class="space-y-2">
+                    <p class="flex justify-between border-b dark:border-slate-700 pb-1"><strong>Variety:</strong> <span>Cinnamomum Burmannii (Kerinci)</span></p>
+                    <p class="flex justify-between border-b dark:border-slate-700 pb-1"><strong>Form:</strong> <span>Fine powder (80-100 mesh)</span></p>
+                    <p class="flex justify-between border-b dark:border-slate-700 pb-1"><strong>Moisture Content:</strong> <span>Max 12%</span></p>
+                    <p class="flex justify-between border-b dark:border-slate-700 pb-1"><strong>Packaging:</strong> <span>Carton Box 25 kg</span></p>
+                    <p class="flex justify-between border-b dark:border-slate-700 pb-1"><strong>Origin:</strong> <span>Kerinci, Jambi, Indonesia</span></p>
+                </div>
+            `,
+            'Kunyit Bubuk (Turmeric Powder)': `
+                <div class="space-y-2">
+                    <p class="flex justify-between border-b dark:border-slate-700 pb-1"><strong>Curcumin Content:</strong> <span>~4-6%</span></p>
+                    <p class="flex justify-between border-b dark:border-slate-700 pb-1"><strong>Form:</strong> <span>Fine powder (80-100 mesh)</span></p>
+                    <p class="flex justify-between border-b dark:border-slate-700 pb-1"><strong>Moisture Content:</strong> <span>Max 10%</span></p>
+                    <p class="flex justify-between border-b dark:border-slate-700 pb-1"><strong>Packaging:</strong> <span>Carton Box 25 kg</span></p>
+                    <p class="flex justify-between border-b dark:border-slate-700 pb-1"><strong>Origin:</strong> <span>Java, Indonesia</span></p>
+                </div>
+            `
+        };
+
+        function openModal(productName) {
+            activeModalProduct = productName;
+            modalTitle.textContent = productName;
+            modalBody.innerHTML = specsData[productName] || "<p>Detailed specification sheets available upon sample request.</p>";
+            modal.classList.remove('hidden');
+        }
+
+        function closeModal() {
+            modal.classList.add('hidden');
+        }
+
+        function requestModalSample() {
+            const message = encodeURIComponent(`Halo CakraBuanaJayantara, saya berminat meminta sampel produk dan spesifikasi teknis untuk: ${activeModalProduct}.`);
+            window.open(`https://wa.me/6287721953144?text=${message}`, '_blank');
+        }
+
+        // --- Copy Email Helper & Toast Notification ---
+        function showToast(text) {
+            const toast = document.getElementById('toastNotification');
+            const toastMsg = document.getElementById('toastMsg');
+            toastMsg.textContent = text;
+            
+            toast.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-4');
+            toast.classList.add('opacity-100', 'translate-y-0');
+
+            setTimeout(() => {
+                toast.classList.remove('opacity-100', 'translate-y-0');
+                toast.classList.add('opacity-0', 'pointer-events-none', 'translate-y-4');
+            }, 3000);
+        }
+
+        function copyEmail() {
+            const email = "cakrabuanajayantara@gmail.com";
+            const tempInput = document.createElement("input");
+            tempInput.value = email;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+
+            showToast("Alamat email berhasil disalin!");
+        }
+
+        // --- Animated Counter Logic ---
+        let countersAnimated = false;
+        function animateCounters() {
+            const counters = document.querySelectorAll('.counter');
+            const dashboardSection = document.getElementById('dashboard');
+            
+            if (!dashboardSection) return;
+            const rect = dashboardSection.getBoundingClientRect();
+
+            if (rect.top <= window.innerHeight && !countersAnimated) {
+                countersAnimated = true;
+                counters.forEach(counter => {
+                    const target = +counter.getAttribute('data-target');
+                    let count = 0;
+                    const increment = target / 40;
+
+                    const updateCount = () => {
+                        count += increment;
+                        if (count < target) {
+                            counter.innerText = Math.ceil(count);
+                            setTimeout(updateCount, 30);
+                        } else {
+                            counter.innerText = target;
+                        }
+                    };
+                    updateCount();
+                });
+            }
+        }
+
+        window.addEventListener('scroll', animateCounters);
+        window.addEventListener('load', animateCounters);
+
+        // Form Submit Handler
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const alert = document.getElementById('formAlert');
+            alert.className = "mt-4 p-4 rounded-xl text-xs sm:text-sm font-medium bg-emerald-100 dark:bg-emerald-900/40 text-emerald-800 dark:text-emerald-200 border border-emerald-200 dark:border-emerald-800 block";
+            
+            const currentLang = document.documentElement.lang;
+            if (currentLang === 'en') {
+                alert.textContent = "Thank you! Your message and order inquiry have been sent successfully. The CakraBuanaJayantara team will contact you shortly.";
+            } else if (currentLang === 'zh') {
+                alert.textContent = "谢谢！您的留言和采购询价已成功发送。CakraBuanaJayantara 团队将尽快与您联系。";
+            } else if (currentLang === 'es') {
+                alert.textContent = "¡Gracias! Su mensaje y solicitud de pedido se han enviado con éxito. El equipo de CakraBuanaJayantara se pondrá en contacto pronto.";
+            } else if (currentLang === 'de') {
+                alert.textContent = "Vielen Dank! Ihre Nachricht und Anfrage wurden erfolgreich gesendet. Das Team von CakraBuanaJayantara wird sich in Kürze bei Ihnen melden.";
+            } else {
+                alert.textContent = "Terima kasih! Pesan dan permintaan penawaran Anda telah berhasil dikirim. Tim CakraBuanaJayantara akan segera menghubungi Anda.";
+            }
+            
+            event.target.reset();
+            showToast("Inquiry berhasil dikirim!");
+        }
+    </script>
+</body>
+</html>
